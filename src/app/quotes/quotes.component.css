@@ -9,7 +9,16 @@
 }
 
 .quotesContent hr {
-    border: 1px solid greenyellow;
+    border: 1px solid rgb(130, 209, 12);
     margin-right: 5%;
+    text-align: center;
+}
+
+.far {
+    color: rgb(130, 209, 12);
+}
+
+#quotesAdded {
+    align-items: center;
     text-align: center;
 }

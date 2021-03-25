@@ -1,0 +1,36 @@
+form {
+    width: 100%;
+    padding: 20px;
+    border-radius: 6px;
+    background: transparent;
+    box-shadow: 0 0 20px 0 rgb(115, 185, 10);
+    float: left;
+    margin-bottom: 10%;
+}
+
+.form-control:hover,
+.form-check-label:hover,
+input:hover::placeholder {
+    color: rgb(130, 209, 12);
+}
+
+.form-group input:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 0 6px 0 rgb(130, 209, 12);
+    color: rgb(103, 165, 9);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: rgb(103, 165, 9);
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(130, 209, 12);
+}
