@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+    scroll-behavior: smooth;
+    background-image: url(../src/assets/background.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-attachment: fixed;
+}
