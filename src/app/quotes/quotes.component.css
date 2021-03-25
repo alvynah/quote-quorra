@@ -7,3 +7,9 @@
     padding-left: 3%;
     color: white;
 }
+
+.quotesContent hr {
+    border: 1px solid greenyellow;
+    margin-right: 5%;
+    text-align: center;
+}
