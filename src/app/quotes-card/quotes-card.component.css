@@ -1,10 +1,40 @@
 .card {
     color: white;
-    width: 400px;
-    height: 200px;
-    background-color: rgb(17, 43, 3);
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(130, 209, 12, 0.2);
+    text-align: left;
+    box-shadow: 0 0 20px 0 grey;
+    border-radius: 6px;
 }
 
 .card-header {
-    border: 2px solid black;
+    border-bottom: 2px solid black;
+    height: auto;
+}
+
+.title {
+    text-shadow: 15px 5px 20px rgb(5, 80, 5);
+}
+
+.author {
+    float: right;
+}
+
+.card-footer {
+    border-top: 2px solid black;
+}
+
+.card .namePosted {
+    float: left;
+}
+
+.datePosted {
+    float: right;
+}
+
+.card-text {
+    font-family: fantasy;
+    font-style: italic;
+    font-size: 25px;
 }
