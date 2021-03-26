@@ -1,16 +1,14 @@
-<div *ngFor='let quote of quotes'>
-    <div class="row">
-        <div class="card col-md-5">
-            <div class="card-header">
-                <h4 class="title"> {{quote.title}}</h4>
-            </div>
-            <div class="card-body ">
-                <p class="card-text "> "{{quote.description}}"</p>
-                <p><span class="author"> ( <strong>{{quote.author}}</strong> )</span> </p>
-            </div>
-            <div class="card-footer ">
-                <p><span class="namePosted">Posted by: {{quote.name}}</span><span class="datePosted">{{quote.dateCreated|date}}</span> </p>
-            </div>
+<div class="myCards">
+    <div *ngFor='let quote of quotes' class="card" style="width:24rem;">
+        <div class="card-header">
+            <h4 class="title"> {{quote.title}}</h4>
+        </div>
+        <div class="card-body ">
+            <p class="card-text "> "{{quote.description}}"</p>
+            <p><span class="author"> ( <strong>{{quote.author}}</strong> )</span> </p>
+        </div>
+        <div class="card-footer ">
+            <p><span class="namePosted">Posted by: {{quote.name}}</span><span class="datePosted">{{quote.dateCreated|date}}</span> </p>
         </div>
     </div>
 </div>
