@@ -1,7 +1,7 @@
 <div class="myCards">
     <div *ngFor='let quote of quotes' class="card" style="width:24rem;">
         <div class="card-header">
-            <h4 class="title"> {{quote.title}}</h4>
+            <h6 class="title"> {{quote.title|uppercase}}</h6>
         </div>
         <div class="card-body ">
             <p class="card-text "> "{{quote.description}}"</p>
