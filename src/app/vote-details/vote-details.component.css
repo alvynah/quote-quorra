@@ -1,0 +1,26 @@
+.voteButton {
+    border-top: 1px solid rgb(0, 0, 0, 0.8);
+    color: white;
+}
+
+#like {
+    color: greenyellow;
+    width: 25px;
+}
+
+#dislike {
+    color: red;
+    width: 25px;
+}
+
+#delete {
+    float: right;
+    width: 50px;
+}
+
+.delete {
+    float: right;
+    padding-top: 2%;
+    margin-bottom: 1%;
+    padding-right: 1%;
+}
