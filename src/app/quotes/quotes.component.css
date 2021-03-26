@@ -8,8 +8,8 @@
     color: white;
 }
 
-.quotesContent hr {
-    border: 1px solid rgb(130, 209, 12);
+hr {
+    border: 2px solid rgb(130, 209, 12);
     margin-right: 5%;
     text-align: center;
 }
@@ -21,4 +21,8 @@
 #quotesAdded {
     align-items: center;
     text-align: center;
+}
+
+.vote hr {
+    border: 2px dashed black;
 }
