@@ -1,0 +1,10 @@
+.card {
+    color: white;
+    width: 400px;
+    height: 200px;
+    background-color: rgb(17, 43, 3);
+}
+
+.card-header {
+    border: 2px solid black;
+}
