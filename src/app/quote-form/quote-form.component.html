@@ -1,24 +1,36 @@
 <div class="container-fluid">
     <h2 class="text-center">Add Quote</h2>
     <hr>
-    <form>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
         <div class="form-group">
             <label for="name">Name :</label>
-            <input type="text" required class="form-control" id="name">
+            <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel'>
+            <p [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                Name is required
+            </p>
         </div>
         <div class="form-group">
             <label for="title">Quote Title :</label>
-            <input type="text" required class="form-control" id="title">
+            <input type="text" required class="form-control" id="title" [(ngModel)]="newQuote.title" name="title" #title='ngModel'>
+            <p [hidden]="title.valid || title.pristine" class="alert alert-danger">
+                Quote title is required
+            </p>
         </div>
         <div class="form-group">
 
             <label for="description">Quote Description :</label>
-            <textarea class="form-control" id="description" rows="3" required></textarea>
+            <textarea class="form-control" id="description" rows="3" required [(ngModel)]="newQuote.description" name="description" #description='ngModel'></textarea>
+            <p [hidden]="description.valid || description.pristine" class="alert alert-danger">
+                Quote description is required
+            </p>
 
         </div>
         <div class="form-group">
             <label for="author">Quote Author :</label>
-            <input type="text" required class="form-control" id="author">
+            <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel'>
+            <p [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                Quote Author is required
+            </p>
         </div>
         <button type="submit" class="button" name="addNewQuote" id="addNewQuote">Add Quote</button>
     </form>

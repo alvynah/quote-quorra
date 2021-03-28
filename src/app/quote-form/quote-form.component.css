@@ -38,3 +38,8 @@ button {
 button:hover {
     background: rgb(130, 209, 12);
 }
+
+.alert {
+    font-size: 15px;
+    height: 3rem;
+}

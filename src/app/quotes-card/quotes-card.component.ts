@@ -13,6 +13,12 @@ export class QuotesCardComponent implements OnInit {
     new Quotes(3, 'Alvynah', 'Uncertainity', 'If life were predictable it would cease to be life, and be without flavor.', 'Eleanor Roosevelt', new Date(2016, 4, 13), 0, 0),
     new Quotes(4, 'Alvynah', 'Life', 'Live, Laugh, Love', 'Alvynah Wabwoba', new Date(2021, 2, 28), 0, 0),
   ];
+  addNewQuote(quote: Quotes) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    quote.dateCreated = new Date(quote.dateCreated)
+    this.quotes.push(quote);
+  }
   // tslint:disable-next-line:typedef
   quoteDelete(isDone: boolean, index: number){
     if (isDone) {
