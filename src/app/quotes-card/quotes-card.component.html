@@ -1,17 +1,18 @@
 <div class="myCards">
-    <div *ngFor='let quote of quotes; let i =index' class="card" style="width:22rem;">
+    <div *ngFor='let quote of quotes; let i =index' class="card" style="width:20rem;">
         <div class="card-header">
-            <h6 class="title"> {{quote.title|uppercase}}</h6>
+            <h6><span class="title"> {{quote.title|uppercase}}</span></h6>
         </div>
         <div class="card-body ">
             <p class="card-text "> "{{quote.description}}"</p>
-            <p><span class="author"> ( ~<strong>{{quote.author}}</strong> )</span> </p>
+            <p><span class="author">~<strong>{{quote.author}}</strong></span> </p>
         </div>
         <app-vote-details [quote]='quote' (isDone)='quoteDelete($event, i)'></app-vote-details>
 
         <div class="card-footer ">
-            <p><span class="namePosted">Posted by: {{quote.name}}</span><span class="datePosted">{{quote.dateCreated|date}}</span> </p>
-            <p><span class="daysPassed">({{quote.dateCreated|dateCount}} days ago )</span></p>
+            <p><span class="namePosted">Posted by: {{quote.name}}</span><span class="datePosted">{{quote.dateCreated|date:'short'|lowercase}}</span> </p>
+            <p> <span class="daysPassed">~{{quote.dateCreated|dateCount}} days ago~</span></p>
         </div>
+
     </div>
 </div>

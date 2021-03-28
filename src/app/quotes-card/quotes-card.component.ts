@@ -11,7 +11,7 @@ export class QuotesCardComponent implements OnInit {
     // tslint:disable-next-line:max-line-length
     new Quotes(2, 'Alvynah', 'Work', 'The way to get started is to quit talking and begin doing', 'Walt Disney', new Date(2020, 6, 30), 0, 0),
     new Quotes(3, 'Alvynah', 'Uncertainity', 'If life were predictable it would cease to be life, and be without flavor.', 'Eleanor Roosevelt', new Date(2016, 4, 13), 0, 0),
-    new Quotes(4, 'Alvynah', 'Life', 'Live, Laugh, Love', 'Alvynah Wabwoba', new Date(2021, 3, 26), 0, 0),
+    new Quotes(4, 'Alvynah', 'Life', 'Live, Laugh, Love', 'Alvynah Wabwoba', new Date(2021, 2, 28), 0, 0),
   ];
   // tslint:disable-next-line:typedef
   quoteDelete(isDone: boolean, index: number){
