@@ -37,6 +37,13 @@
     float: right;
 }
 
+.daysPassed {
+    color: white;
+    font-size: 15px;
+    font-style: italic;
+    float: right;
+}
+
 .card-text {
     font-family: fantasy;
     font-style: italic;
