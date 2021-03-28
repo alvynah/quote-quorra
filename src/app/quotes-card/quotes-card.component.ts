@@ -12,6 +12,13 @@ export class QuotesCardComponent implements OnInit {
     new Quotes(3, 'Alvynah', 'Uncertainity', 'If life were predictable it would cease to be life, and be without flavor.', 'Eleanor Roosevelt', new Date(2016, 4, 13)),
     new Quotes(4, 'Alvynah', 'Life', 'Live, Laugh, Love', 'Alvynah Wabwoba', new Date(2021, 3, 26)),
   ];
+  // tslint:disable-next-line:typedef
+  quoteDelete(isDone: boolean, index: number){
+    if (isDone) {
+      this.quotes.splice(index, 1);
+    }
+  }
+
   constructor() { }
 
   ngOnInit(): void {

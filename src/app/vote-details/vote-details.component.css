@@ -6,16 +6,19 @@
 #like {
     color: greenyellow;
     width: 25px;
+    height: 25px;
 }
 
 #dislike {
-    color: red;
+    color: black;
     width: 25px;
+    height: 25px;
 }
 
 #delete {
     float: right;
     width: 50px;
+    color: rgb(204, 7, 7);
 }
 
 .delete {
@@ -23,4 +26,9 @@
     padding-top: 2%;
     margin-bottom: 1%;
     padding-right: 1%;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+    background-color: white;
 }

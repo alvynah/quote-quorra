@@ -1,7 +1,10 @@
 <div class="voteButton">
-    <button class="btn btn-sm"> <i class="fa fa-thumbs-up"  id="like"></i></button>
-    <button class="btn btn-sm hate" id="hate"><i class="fa fa-thumbs-down" id="dislike"></i></button>
+    <div class="btn-group">
+        <button class="btn btn-sm"> <i class="fa fa-thumbs-up" id="like"></i></button>
+        <button class="btn btn-sm " id="hate"><i class="fa fa-thumbs-down" id="dislike"></i></button>
+
+    </div>
     <span class="delete">
-    <button class="btn btn-sm btn-danger" id="del"><i class="fa fa-trash" id="delete"></i></button>
+        <button class="btn btn-sm " id="del" (click)='quoteDelete(true)'><i class="fa fa-trash" id="delete"></i></button>
     </span>
 </div>
