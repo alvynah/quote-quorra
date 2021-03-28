@@ -3,6 +3,11 @@
     color: white;
 }
 
+#likeBtn,
+#hateBtn {
+    color: white;
+}
+
 #like {
     color: greenyellow;
     width: 25px;
@@ -10,7 +15,7 @@
 }
 
 #dislike {
-    color: black;
+    color: rgba(204, 7, 7);
     width: 25px;
     height: 25px;
 }
@@ -30,5 +35,5 @@
 
 .btn:hover {
     transform: scale(1.2);
-    background-color: white;
+    background-color: rgb(0, 0, 0, 0.8);
 }
