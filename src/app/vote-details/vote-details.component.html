@@ -1,7 +1,7 @@
 <div class="voteButton">
     <div class="btn-group">
-        <button class="btn btn-sm"> <i class="fa fa-thumbs-up" id="like"></i></button>
-        <button class="btn btn-sm " id="hate"><i class="fa fa-thumbs-down" id="dislike"></i></button>
+        <button class="btn btn-sm" (click)='upVote()'> <i class="fa fa-thumbs-up" id="like"></i>{{quote.likes}}</button>
+        <button class="btn btn-sm " id="hate" (click)='downVote()'><i class="fa fa-thumbs-down" id="dislike">{{quote.dislikes}}</i></button>
 
     </div>
     <span class="delete">
