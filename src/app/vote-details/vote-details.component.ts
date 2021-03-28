@@ -15,9 +15,11 @@ export class VoteDetailsComponent implements OnInit {
 quoteDelete(complete: boolean){
   this.isDone.emit(complete);
 }
+// tslint:disable-next-line:typedef
 upVote(){
   this.quote.likes += 1;
 }
+// tslint:disable-next-line:typedef
 downVote(){
   this.quote.dislikes += 1;
 }
