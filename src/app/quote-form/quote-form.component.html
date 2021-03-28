@@ -2,36 +2,51 @@
     <h2 class="text-center">Add Quote</h2>
     <hr>
     <form (ngSubmit)='submitQuote(); quoteForm.reset()' #quoteForm='ngForm'>
+
         <div class="form-group">
             <label for="name">Name :</label>
-            <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel'>
-            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                Name is required
+            <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel' minlength="3">
+            <div *ngIf="name.invalid &&(name.dirty || name.touched)" class="alert alert-danger">
+                <div *ngIf="name.errors.required">
+                    Name is required
+                </div>
+                <div *ngIf="name.errors.minlength">
+                    Miminum length is 3 characters
+                </div>
 
             </div>
         </div>
         <div class="form-group">
             <label for="title">Quote Title :</label>
             <input type="text" required class="form-control" id="title" [(ngModel)]="newQuote.title" name="title" #title='ngModel'>
-            <p [hidden]="title.valid || title.pristine" class="alert alert-danger">
-                Quote title is required
-            </p>
+
+            <div *ngIf="title.invalid &&(title.dirty || title.touched)" class="alert alert-danger">
+                <div *ngIf="title.errors.required">
+                    Quote title is required
+                </div>
+            </div>
         </div>
         <div class="form-group">
 
             <label for="description">Quote Description :</label>
             <textarea class="form-control" id="description" rows="3" required [(ngModel)]="newQuote.description" name="description" #description='ngModel'></textarea>
-            <p [hidden]="description.valid || description.pristine" class="alert alert-danger">
-                Quote description is required
-            </p>
+
+            <div *ngIf="description.invalid &&(description.dirty || description.touched)" class="alert alert-danger">
+                <div *ngIf="description.errors.required">
+                    Quote description is required
+                </div>
+            </div>
 
         </div>
         <div class="form-group">
             <label for="author">Quote Author :</label>
             <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel'>
-            <p [hidden]="author.valid || author.pristine" class="alert alert-danger">
-                Quote Author is required
-            </p>
+
+            <div *ngIf="author.invalid &&(author.dirty || author.touched)" class="alert alert-danger">
+                <div *ngIf="author.errors.required">
+                    Quote Author is required
+                </div>
+            </div>
         </div>
         <button type="submit" class="button" name="addNewQuote" id="addNewQuote">Add Quote</button>
     </form>
