@@ -11,9 +11,8 @@ newQuote = new Quotes(0, '', '', '', '', new Date(), 0, 0);
 @Output() addQuote = new EventEmitter<Quotes>();
 // tslint:disable-next-line:typedef
 submitQuote(){
-
+  
   this.addQuote.emit(this.newQuote);
-
 }
   constructor() { }
 
