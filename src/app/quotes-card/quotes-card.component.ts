@@ -12,6 +12,12 @@ export class QuotesCardComponent implements OnInit {
     new Quotes(2, 'Alvynah', 'Work', 'The way to get started is to quit talking and begin doing', 'Walt Disney', new Date(2020, 6, 30), 0, 0),
     new Quotes(3, 'Alvynah', 'Life', 'Live, Laugh, Love', 'Alvynah Wabwoba', new Date(2021, 2, 28), 0, 0),
   ];
+  get sortQuotes() {
+    return this.quotes.sort((a, b) => {
+      return <any>new Date(b.likes) - <any>new Date(a.likes);
+
+    });
+  }
   // tslint:disable-next-line:typedef
   addNewQuote(quote: Quotes) {
     const quoteLength = this.quotes.length;
