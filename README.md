@@ -29,30 +29,30 @@ This is a quotes website which allows a user to enter a new quote, upvote or dow
 ## Behaviour Driven Development
 * ADD QUOTE
 
-INPUTS
+Inputs
 1. Name
 2. Quote title
 3. Quote Description
 4. Quote Author
 
-BEHAVIOUR
+Behaviour
 User inputs the above inputs,clicks the add quote button and a new quote is created. If the user does not enter input and clicks button Add Quote,the user is prompted to input missing fields. When the user enters items in a field and then clears the field, an alert message is shown. 
 
-OUTPUTS
+Outputs
 1. New quote displayed by a card
 
 
-* Upvote and Downvote
+* UPVOTE AND DOWNVOTE
 
-BUTTON CLICKS
+Button Clicks
 1. Thumbs-up icon
 2. Thumbs-down icon
 
-BEHAVIOUR
+Behaviour
 
 User clicks on the thumbs up button to upvote and on the thumbs down button to downvote. The displayed quotes will be arranged from the highest voted quote to the least voted quote.The highest upvoted quote is then highleted and displayed as the most upvoted quote.
 
-OUTPUTS
+Outputs
 
 1. Most upvoted quote is highlighted
 2. Quotes are arranged from highest upvoted to least upvoted.
