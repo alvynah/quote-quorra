@@ -27,6 +27,7 @@ export class QuotesCardComponent implements OnInit {
   // tslint:disable-next-line:typedef
   upVote() {
    this.popularQuotes();
+   this.sortQuotes();
   }
   popularQuotes(): void {
     const upvoted: number = Math.max.apply(Math, this.getQuotes().map((chosen) => chosen.likes));
@@ -42,6 +43,12 @@ export class QuotesCardComponent implements OnInit {
         }
       });
     }
+  }
+  // tslint:disable-next-line:typedef
+  sortQuotes(){
+   
+    // tslint:disable-next-line:no-shadowed-variable
+    this.quotes.sort((b, a) => (b.likes > a.likes) ? -1 : 1);
   }
 
   // tslint:disable-next-line:typedef
