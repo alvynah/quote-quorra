@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <h2 class="text-center">Add Quote</h2>
     <hr>
-    <form (ngSubmit)='submitQuote();quoteForm.resetForm({})' #quoteForm='ngForm'>
+    <form (ngSubmit)='submitQuote();quoteForm.resetForm({})' #quoteForm='ngForm' ngNativeValidate>
 
         <div class="form-group">
             <label for="name">Name :</label>
@@ -13,7 +13,6 @@
                 <div *ngIf="name.errors.minlength">
                     Miminum length is 3 characters
                 </div>
-
             </div>
         </div>
         <div class="form-group">

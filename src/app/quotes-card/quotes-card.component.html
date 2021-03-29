@@ -16,8 +16,9 @@
             </span>
 
             <div class="myCards">
-                <div *ngFor='let quote of quotes; let i =index' class="card" style="width:20rem;">
-                    <div *ngIf='quote.isFavorite' appHighlightPopular>
+                <div *ngFor='let quote of quotes; let i =index' style="width:20rem;">
+                    <div *ngIf='quote.isFavorite' appHighlightPopular class="card">
+                        <h3>Most voted Quote</h3>
                         <div class="card-header">
                             <h6><span class="title"> {{quote.title|uppercase}} </span></h6>
                         </div>
@@ -42,7 +43,7 @@
 
 
                     </div>
-                    <div *ngIf='!quote.isFavorite'>
+                    <div *ngIf='!quote.isFavorite' class="card">
                         <div class="card-header">
                             <h6><span class="title"> {{quote.title|uppercase}} </span></h6>
                         </div>

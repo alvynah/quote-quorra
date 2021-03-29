@@ -12,13 +12,8 @@ export class QuotesCardComponent implements OnInit {
     new Quotes(2, 'Alvynah', 'Work', 'The way to get started is to quit talking and begin doing', 'Walt Disney', new Date(2020, 6, 30), 0, 0, false),
     new Quotes(3, 'Alvynah', 'Life', 'Live, Laugh, Love', 'Alvynah Wabwoba', new Date(2021, 2, 28), 0, 0, false),
   ];
-  sortQuotes(quote: Quotes) {
 
-   const maxLikes = Math.max(quote.likes);
-   console.log(maxLikes);
-   return maxLikes;
- }
-
+  // tslint:disable-next-line:typedef
   getQuotes() {
     return this.quotes;
   }
@@ -29,14 +24,15 @@ export class QuotesCardComponent implements OnInit {
     quote.dateCreated = new Date(quote.dateCreated);
     this.quotes.push(quote);
   }
+  // tslint:disable-next-line:typedef
   upVote() {
-   this.rankQuotes(); 
+   this.popularQuotes();
   }
-  rankQuotes(): void {
-    let upvoted: number = Math.max.apply(Math, this.getQuotes().map(function (chosen) { return chosen.likes; }));
+  popularQuotes(): void {
+    const upvoted: number = Math.max.apply(Math, this.getQuotes().map((chosen) => chosen.likes));
     if (upvoted > 0) {
-      let upvotedQuote: any = this.getQuotes().find(function (selected) { return selected.likes == upvoted; });
-      let favIndex: number = this.getQuotes().indexOf(upvotedQuote);
+      const upvotedQuote: any = this.getQuotes().find((selected) => selected.likes === upvoted);
+      const favIndex: number = this.getQuotes().indexOf(upvotedQuote);
       this.getQuotes().map((quote) => {
         if (favIndex === this.getQuotes().indexOf(quote)) {
           this.quotes[favIndex].isFavorite = true;
@@ -51,13 +47,12 @@ export class QuotesCardComponent implements OnInit {
   // tslint:disable-next-line:typedef
   quoteDelete(isDone: boolean, index: number){
     if (isDone) {
-      const toDeleteQuote = confirm('Are you sure you want to delete?');
+      const toDeleteQuote = confirm('Are you sure you want to delete this card?');
       if (toDeleteQuote){
       this.quotes.splice(index, 1);
-
     }
     }
-    this.rankQuotes();
+    this.popularQuotes();
   }
 
   constructor() { }
