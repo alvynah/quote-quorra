@@ -17,27 +17,53 @@
 
             <div class="myCards">
                 <div *ngFor='let quote of quotes; let i =index' class="card" style="width:20rem;">
-                    <div class="card-header">
-                        <h6><span class="title"> {{quote.title|uppercase}}</span></h6>
-                    </div>
-                    <div class="card-body ">
-                        <p class="card-text "> "{{quote.description}}"</p>
-                        <p><span class="author">~<strong>{{quote.author}}</strong></span> </p>
-                    </div>
-                    <app-vote-details [quote]='quote' (isDone)='quoteDelete($event, i)'></app-vote-details>
+                    <div *ngIf='quote.isFavorite' appHighlightPopular>
+                        <div class="card-header">
+                            <h6><span class="title"> {{quote.title|uppercase}} </span></h6>
+                        </div>
+                        <div class="card-body ">
+                            <p class="card-text "> "{{quote.description}}"</p>
+                            <p><span class="author">~<strong>{{quote.author}}</strong></span> </p>
+                        </div>
+                        <app-vote-details [quote]='quote' (isDone)='quoteDelete($event, i)' (Vote)='upVote()'></app-vote-details>
 
-                    <div class="card-footer ">
-                        <div class="row">
-                            <div class="col-sm-5">
-                                <p class="namePosted">Posted by: {{quote.name}}</p>
+                        <div class="card-footer ">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <p class="namePosted">Posted by: {{quote.name}}</p>
 
-                            </div>
-                            <div class="col-sm-7">
-                                <p class="datePosted">{{quote.dateCreated|date:'short'|lowercase}}</p>
-                                <p> <span class="daysPassed">~{{quote.dateCreated|dateCount}} days ago~</span></p>
+                                </div>
+                                <div class="col-sm-7">
+                                    <p class="datePosted">{{quote.dateCreated|date:'short'|lowercase}}</p>
+                                    <p> <span class="daysPassed">~{{quote.dateCreated|dateCount}} days ago~</span></p>
+                                </div>
                             </div>
                         </div>
 
+
+                    </div>
+                    <div *ngIf='!quote.isFavorite'>
+                        <div class="card-header">
+                            <h6><span class="title"> {{quote.title|uppercase}} </span></h6>
+                        </div>
+                        <div class="card-body ">
+                            <p class="card-text "> "{{quote.description}}"</p>
+                            <p><span class="author">~<strong>{{quote.author}}</strong></span> </p>
+                        </div>
+                        <app-vote-details [quote]='quote' (isDone)='quoteDelete($event, i)' (Vote)='upVote()'></app-vote-details>
+
+                        <div class="card-footer ">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <p class="namePosted">Posted by: {{quote.name}}</p>
+
+                                </div>
+                                <div class="col-sm-7">
+                                    <p class="datePosted">{{quote.dateCreated|date:'short'|lowercase}}</p>
+                                    <p> <span class="daysPassed">~{{quote.dateCreated|dateCount}} days ago~</span></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

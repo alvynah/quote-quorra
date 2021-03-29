@@ -1,10 +1,11 @@
 <div class="voteButton">
     <div class="btn-group">
-        <button class="btn btn-sm" id=likeBtn (click)='upVote()'> <i class="fa fa-thumbs-up" id="like"></i>{{quote.likes}}</button>
+        <button class="btn btn-sm" id=likeBtn (click)='upVote(0)'> <i class="fa fa-thumbs-up" id="like"></i>{{quote.likes}}</button>
         <button class="btn btn-sm " id=hateBtn (click)='downVote()'><i class="fa fa-thumbs-down" id="dislike"></i>{{quote.dislikes}}</button>
 
     </div>
     <span class="delete">
         <button class="btn btn-sm " id="del" (click)='quoteDelete(true)'><i class="fa fa-trash" id="delete"></i></button>
     </span>
+
 </div>

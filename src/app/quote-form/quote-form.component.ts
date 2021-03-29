@@ -8,14 +8,14 @@ import { Quotes} from '../quotes';
   styleUrls: ['./quote-form.component.css']
 })
 export class QuoteFormComponent implements OnInit {
-newQuote = new Quotes(0, '', '', '', '', new Date(), 0, 0);
+newQuote = new Quotes(0, '', '', '', '', new Date(), 0, 0,false);
 @Output() addQuote = new EventEmitter<Quotes>();
 // tslint:disable-next-line:typedef
 submitQuote(){
 
   this.addQuote.emit(this.newQuote);
   console.log(this.newQuote);
-  this.newQuote = new Quotes(0, '', '', '', '', new Date(), 0, 0);
+  this.newQuote = new Quotes(0, '', '', '', '', new Date(), 0, 0,false);
 
 }
   constructor() { }
