@@ -11,7 +11,7 @@ This is a website application generated with generated with [Angular CLI](https:
 This is a quotes website which allows a user to enter a new quote, upvote or downvote an existing quote and to delete the quote.The quote with the highest number of upvotes is highlighted.
 
 # Live site
-[quote-quorra] (https://quote-quorra.netlify.app)
+[quote-quorra](https://quote-quorra.netlify.app)
 ## Project Setup Instructions
 * Open Terminal {Ctrl+Alt+T}
 * git clone https://github.com/alvynah/quote-quorra.git
