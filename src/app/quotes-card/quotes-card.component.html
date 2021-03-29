@@ -18,7 +18,7 @@
             <div class="myCards">
                 <div *ngFor='let quote of quotes; let i =index' style="width:20rem;">
                     <div *ngIf='quote.isFavorite' appHighlightPopular class="card">
-                        <h3>Most voted Quote</h3>
+                        <h3>Most upvoted Quote</h3>
                         <div class="card-header">
                             <h6><span class="title"> {{quote.title|uppercase}} </span></h6>
                         </div>
